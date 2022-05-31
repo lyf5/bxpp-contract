@@ -20,13 +20,11 @@ contract BXPP is
     ERC721BurnableUpgradeable,
     ERC721PausableUpgradeable
 {
-    function initialize(
+    function initialize(string memory name, string memory symbol, string memory url
     ) public virtual initializer {
-        __BXPP_init("Bai Xue Piao Piao Test11", 
-                     "BXPPTEST11", 
+        __BXPP_init(name, symbol, url 
                      // "https://2kz9yd8ztj.execute-api.us-east-1.amazonaws.com/Prod/token/",
-                     "http://localhost:4000/dev/token/"
-
+                     // = "http://localhost:4000/dev/token/"
         );
     }
     using CountersUpgradeable for CountersUpgradeable.Counter;
