@@ -13,8 +13,14 @@ contract ContractTemplate is
     ReentrancyGuardUpgradeable,
     ERC721PausableUpgradeable
 {
+    /***
     function initialize(string memory name, string memory symbol, string memory url
     ) public virtual initializer {
+        __ContractTemplate_init(name, symbol, url);
+    }
+    ***/
+    constructor(string memory name, string memory symbol, string memory url
+    ) {
         __ContractTemplate_init(name, symbol, url);
     }
     using CountersUpgradeable for CountersUpgradeable.Counter;
